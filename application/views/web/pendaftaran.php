@@ -6,9 +6,9 @@
     <meta name="description" content="admin-themes-lab">
     <meta name="author" content="themes-lab">
 		<base href="<?php echo base_url();?>"/>
-    <link rel="shortcut icon" href="assets/images/unnamed.jpg" type="image/png">
+    <link rel="shortcut icon" href="assets/images/unnamed.png" type="image/png">
     <title>PPDB SMK NURUL HAYYAH</title>
-    <link rel="icon" href="assets/images/unnamed.jpg" type="image/x-icon" />
+    <link rel="icon" href="assets/images/unnamed.png" type="image/x-icon" />
     <link href="assets/kitkat/assets/css/style.css" rel="stylesheet">
     <link href="assets/kitkat/assets/css/theme.css" rel="stylesheet">
     <link href="assets/kitkat/assets/css/ui.css" rel="stylesheet">
@@ -55,13 +55,13 @@
 
       <div class="main-content">
         <!-- BEGIN TOPBAR -->
-        <div class="topbar" style="background-color: #FF0000;color:#fff;">
+        <div class="topbar" style="background-color: #E23338;color:#fff;">
           <div class="header-left">
             <div class="col-sm-12">
               <div style="margin-top:-8px;">
               <h2>
 								<strong class="text-primary">
-									<a href=""><img src="img/unnamed.jpg" alt="Logo" width="35" style="position:absolute;margin-top:-8px;"> <span style="margin-left:40px;color:#fff;">PPDB Online</span></a>
+									<a href=""><img src="img/unnamed.png" alt="Logo" width="35" style="position:absolute;margin-top:-8px;"> <span style="margin-left:40px;color:#fff;">PPDB Online</span></a>
 								</strong>
 							</h>
               </div>
@@ -180,6 +180,9 @@
                                  <br><br>
                                  <div class="col-md-12" >
                                        <span class="text-primary" style="font-size:18px;"><strong>Apakah data calon siswa sudah sesuai dan lengkap?</strong></span>
+                                       <li>Setelah pengisian selesai, lalu klik centang & klik daftar sekarang maka akan langsung login otomatis.</li>
+                                       <li>Harap download cetak bukti pendaftaran untuk mendapatkan nomor pendaftaran sebagai username & NISN sebagai password anda</li>
+                                       <li>Jika ada kendala langsung menghubungi via whatsaap admin, klik Bantuan di halaman utama</li>
                                        <div class="form-group">
                                           <div class="radio bg-success p-10" style="border-radius:3px;" >
                                              <label>
@@ -207,7 +210,7 @@
           <div class="footer">
             <div class="copyright">
               <p class="pull-left sm-pull-reset">
-                <span>Copyright &copy; <a href="http://www.smknuhabisa.id" target="_blank">SMK NURUL HAYYAH</a> <?php echo date('Y'); ?> | IT Development</span>
+                <span>Copyright &copy; <a href="https://nuha.smkbisa.id/" target="_blank">SMK NURUL HAYYAH</a> <?php echo date('Y'); ?> | IT Development</span>
               </p>
               <p class="pull-right sm-pull-reset">
                 <span><a href="" class="m-r-10"><i class="fa fa-home"></i> Beranda </a> | <a href="#" class="m-l-10 m-r-10" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-legal"></i>Ketentuan & Syarat PPDB</a></span>

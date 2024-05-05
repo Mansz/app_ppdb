@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <div class="layer"></div>
 <div class="obox">
 <div class="row">
@@ -9,7 +10,7 @@
             <a href=""><i class="fa fa-times" style="color:#fff"></i></a></span>
             </div>
             <h4 class="text-success"><br><br>
-               <img src="img/unnamed.jpg" width="50">
+               <img src="img/unnamed.png" width="50">
                Login Administrasi Calon Siswa
             </h4>
             <div class="col-md-12">

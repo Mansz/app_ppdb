@@ -20,7 +20,7 @@ $user = $user->row();?>
           <div class="panel-body">
             
               <center>
-                <img src="assets/panel/images/unnamed.jpg" alt="<?php echo $user->nama_lengkap; ?>" class="" width="176">
+                <img src="assets/panel/images/unnamed.png" alt="<?php echo $user->nama_lengkap; ?>" class="" width="176">
               </center>
             <br>
             <fieldset class="content-group">

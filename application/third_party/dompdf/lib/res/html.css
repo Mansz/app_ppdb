@@ -53,23 +53,23 @@
 }
 
 html { 
-  display: -dompdf-page;
+  display: flex;
   counter-increment: page;
 }
 
 /* blocks */
 
 div, map, dt, isindex {
-  display: block;
+  display: flex;
 }
 
 body {
   page-break-before: avoid;
-  display: block;
+  display: flex;
 }
 
 p, dl, multicol {
-  display: block;
+  display: flex;
   margin: 1em 0;
 }
 

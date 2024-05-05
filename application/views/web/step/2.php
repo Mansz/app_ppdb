@@ -4,35 +4,39 @@
   </div>
   <div class="panel-body">
 
-    <div class="form-group" style="padding-bottom:30px;">
-        <label class="col-sm-3 control-label"style="text-align:right; margin-top:6px">N.I.S <span class="text-danger">*</span></label>
-        <div class="col-sm-9 prepend-icon" style="margin-top:1px;">
-          <input type="text" name="nis" class="form-control bg-blue class" onkeypress="return hanyaAngka(this);" maxlength="30" placeholder="Nomor Induk Siswa" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nis"]' required>
-          <i class="fa fa-users" style="margin-left:15px;"></i>
-          <div id="error-nis" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-          <div id="pesan_komentar">*Sesuai dengan data dari rapot</div>
-        </div>
+  <div class="form-group" style="padding-bottom:30px;">
+    <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">N.I.S <span class="text-danger">*</span></label>
+    <div class="col-sm-9 prepend-icon" style="margin-top:1px;">
+        <input type="text" name="nis" class="form-control bg-blue class" oninput="this.value = this.value.replace(/\D/g, '')" maxlength="30" placeholder="Nomor Induk Siswa" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nis"]' required>
+        <i class="fa fa-users" style="margin-left:15px;"></i>
+        <div id="error-nis" style="background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+        <div id="pesan_komentar">*Sesuai dengan data dari rapot</div>
     </div>
+</div>
 
-  <div class="form-group" style="padding-bottom:30px;">
-      <label class="col-sm-3 control-label"style="text-align:right; margin-top:6px">N.I.S.N <span class="text-danger">*</span></label>
-      <div class="col-sm-9 prepend-icon" style="margin-top:1px;">
-        <input type="text" name="nisn" class="form-control bg-blue class" onkeypress="return hanyaAngka(this);" maxlength="30" placeholder="Nomor Induk Siswa Nasional" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nisn"]' required>
-        <i class="fa fa-users" style="margin-left:15px;"></i>
-        <div id="error-nisn" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-        <div id="pesan_komentar">*Sesuai dengan data dari web  http://nisn.data.kemdikbud.go.id</div>
-      </div>
-  </div>
 
-  <div class="form-group" style="padding-bottom:30px;">
-      <label class="col-sm-3 control-label"style="text-align:right; margin-top:6px">N.I.K <span class="text-danger">*</span></label>
-      <div class="col-sm-9 prepend-icon" style="margin-top:1px;">
-        <input type="text" name="nik" class="form-control bg-blue class" onkeypress="return hanyaAngka(this);" maxlength="30" placeholder="NIK" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nik"]' required>
+
+<div class="form-group" style="padding-bottom:30px;">
+    <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">N.I.S.N <span class="text-danger">*</span></label>
+    <div class="col-sm-9 prepend-icon" style="margin-top:1px;">
+        <input type="text" name="nisn" class="form-control bg-blue class" oninput="this.value = this.value.replace(/\D/g, '')" maxlength="30" placeholder="Nomor Induk Siswa Nasional" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nisn"]' required>
         <i class="fa fa-users" style="margin-left:15px;"></i>
-        <div id="error-nik" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+        <div id="error-nisn" style="background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+        <div id="pesan_komentar">*Sesuai dengan data dari web http://nisn.data.kemdikbud.go.id</div>
+    </div>
+</div>
+
+
+<div class="form-group" style="padding-bottom:30px;">
+    <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">N.I.K <span class="text-danger">*</span></label>
+    <div class="col-sm-9 prepend-icon" style="margin-top:1px;">
+        <input type="text" name="nik" class="form-control bg-blue class" oninput="this.value = this.value.replace(/\D/g, '')" maxlength="30" placeholder="NIK" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nik"]' required>
+        <i class="fa fa-users" style="margin-left:15px;"></i>
+        <div id="error-nik" style="background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
         <div id="pesan_komentar">*Sesuai dengan Kartu Keluarga (KK)</div>
-      </div>
-  </div>
+    </div>
+</div>
+
 
   <div class="form-group" style="padding-bottom:30px;">
       <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Nama Lengkap <span class="text-danger">*</span></label>
@@ -63,13 +67,15 @@
   </div>
 
   <div class="form-group">
-      <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Tempat Kelahiran <span class="text-danger">*</span></label>
-      <div class="col-sm-9 prepend-icon" >
-        <input type="text" name="tempat_lahir" class="form-control bg-blue class" placeholder="Tempat Kelahiran Calon Siswa" data-parsley-group="block1" data-parsley-errors-container='div[id="error-tempat_lahir"]' required>
+    <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Tempat Kelahiran <span class="text-danger">*</span></label>
+    <div class="col-sm-9 prepend-icon">
+        <input type="text" name="tempat_lahir" class="form-control bg-blue class" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" placeholder="Tempat Kelahiran Calon Siswa" data-parsley-group="block1" data-parsley-errors-container='div[id="error-tempat_lahir"]' required>
         <i class="fa fa-building" style="margin-left:15px;"></i>
-        <div id="error-tempat_lahir" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-      </div>
-  </div>
+        <div id="error-tempat_lahir" style="background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+    </div>
+</div>
+
+
  <div class="form-group" >
     <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Tanggal Kelahiran <span class="text-danger">*</span></label>
     <div class="col-sm-9" style="margin-top:3px;">
@@ -125,13 +131,6 @@
       <select class="form-control bg-blue class" data-placeholder="Pilih Agama yang dianut" name="agama" data-parsley-group="block1" data-parsley-errors-container='div[id="error-agama"]' required>
               <option value="">Pilih agama yang dianut</option>
               <option value="Islam">Islam</option>
-              <option value="Kristen">Kristen</option>
-              <option value="Katolik">Katolik</option>
-              <option value="Kristen Protestan">Kristen Protestan</option>
-              <option value="Hindu">Hindu</option>
-              <option value="Budha">Budha</option>
-              <option value="Konghucu">Konghucu</option>
-              <option value="lainnya">Lainnya</option>
       </select>
       <div id="error-agama" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
     </div>

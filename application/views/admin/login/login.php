@@ -5,7 +5,7 @@
 						<div class="panel panel-body login-form">
 							<div class="text-center">
 								<!-- <div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div> -->
-								<img src="img/unnamed.jpg" alt="Logo" width="100">
+								<img src="img/unnamed.png" alt="Logo" width="100">
 								<h5 class="content-group">Form Login PPDB Online<small class="display-block">SMK NURUL HAYYAH</small></h5>
 								<?php
 								echo $this->session->flashdata('msg');

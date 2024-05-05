@@ -4,14 +4,25 @@
   </div>
   <div class="panel-body">
 
-        <div class="form-group" style="padding-bottom:30px;">
-            <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Nama Lengkap <span class="text-danger">*</span></label>
-            <div class="col-sm-9 prepend-icon">
-              <input type="text" name="nama_ayah" class="form-control bg-blue" placeholder="Nama lengkap Ayah"  maxlength="100" data-parsley-group="block2" data-radio="iradio_square-blue" data-parsley-errors-container='div[id="error-nama_ayah"]' required>
-              <i class="fa fa-user" style="margin-left:15px;"></i>
-              <div id="error-nama_ayah" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-            </div>
-        </div>
+  <div class="form-group" style="padding-bottom:30px;">
+    <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Nama Lengkap <span class="text-danger">*</span></label>
+    <div class="col-sm-9 prepend-icon">
+        <input type="text" name="nama_ayah" class="form-control bg-blue" placeholder="Nama lengkap Ayah" maxlength="100" data-parsley-group="block2" data-radio="iradio_square-blue" data-parsley-errors-container='div[id="error-nama_ayah"]' required>
+        <i class="fa fa-user" style="margin-left:15px;"></i>
+        <div id="error-nama_ayah" style="background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+    </div>
+</div>
+
+<script>
+    function hanyaHuruf(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if ((charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122) && charCode != 32) {
+            return false;
+        }
+        return true;
+    }
+</script>
+
 
         <div class="form-group">
             <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Pendidikan <span class="text-danger">*</span></label>
@@ -70,14 +81,25 @@
   </div>
   <div class="panel-body">
 
-        <div class="form-group" style="padding-bottom:30px;">
-            <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Nama Lengkap <span class="text-danger">*</span></label>
-            <div class="col-sm-9 prepend-icon">
-              <input type="text" name="nama_ibu" class="form-control bg-blue" placeholder="Nama lengkap Ibu"  maxlength="100" data-parsley-group="block2" data-radio="iradio_square-blue" data-parsley-errors-container='div[id="error-nama_ibu"]' required>
-              <i class="fa fa-user" style="margin-left:15px;"></i>
-              <div id="error-nama_ibu" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-            </div>
-        </div>
+  <div class="form-group" style="padding-bottom:30px;">
+    <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Nama Lengkap <span class="text-danger">*</span></label>
+    <div class="col-sm-9 prepend-icon">
+        <input type="text" name="nama_ibu" class="form-control bg-blue" placeholder="Nama lengkap Ibu" maxlength="100" data-parsley-group="block2" data-radio="iradio_square-blue" data-parsley-errors-container='div[id="error-nama_ibu"]' required>
+        <i class="fa fa-user" style="margin-left:15px;"></i>
+        <div id="error-nama_ibu" style="background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+    </div>
+</div>
+
+<script>
+    function hanyaHuruf(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if ((charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) {
+            return false;
+        }
+        return true;
+    }
+</script>
+
 
         <div class="form-group">
             <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Pendidikan <span class="text-danger">*</span></label>

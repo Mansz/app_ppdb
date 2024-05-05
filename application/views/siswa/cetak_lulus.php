@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title><?php echo $judul_web; ?></title>
     <base href="<?php echo base_url();?>"/>
-  	<link rel="icon" type="image/png" href="assets/images/unnamed.jpg"/>
+  	<link rel="icon" type="image/png" href="assets/images/unnamed.png"/>
     <style>
     table {
         border-collapse: collapse;
@@ -36,7 +36,7 @@
     <br>
     <h4 align="center" style="margin:0px;font-size:19px;"><u><b>S U R A T  P E N G U M U M A N</b></u></h4>
       <center>
-        No : 420/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/PPDB.SMKBISANUHA/<?php echo $thn_ppdb; ?>
+        No : 420/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/PPDB.SMKNURULHAYAH/<?php echo $thn_ppdb; ?>
       </center>
 
     <br>
@@ -134,7 +134,7 @@
     </center>
     <br>
 
-    Seleksi Sebagai Calon Peserta Didik SMA Nurul Hayayah tahun ajaran <?php echo $thn_ppdb; ?>/<?php echo $thn_ppdb+1; ?>.<br>
+    Seleksi Sebagai Calon Peserta Didik SMK Nurul Hayyah tahun ajaran <?php echo $thn_ppdb; ?>/<?php echo $thn_ppdb+1; ?>.<br>
     Demikian pengumuman ini disampaikan untuk dapat digunakan sebagai mestinya.
     <br><br>
 

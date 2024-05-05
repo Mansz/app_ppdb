@@ -4,14 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>PPDB Online | SMK NURUL HAYYAH</title>
 		<base href="<?php echo base_url();?>"/>
 
-		<link rel="icon" href="assets/images/unnamed.jpg" type="image/x-icon" />
+		<link rel="icon" href="assets/images/unnamed.png" type="image/x-icon" />
     <!-- Bootstrap Core CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/faa.css" rel="stylesheet">
@@ -21,6 +22,28 @@
     <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <style>
+        .navbar-custom {
+            background-color: #f51d01; 
+        }
+        .navbar-brand img {
+            margin-top: -10px;
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .navbar-toggler-icon {
+            background-image: none;
+        }
+        @media (max-width: 767px) {
+            .navbar-brand img {
+                margin-top: 0;
+            }
+            .navbar-brand span {
+                display: none;
+            }
+        }
+    </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -38,7 +61,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top"><img src="img/unnamed.jpg" alt="Logo" width="30" style="position:absolute;margin-top:-10px;"> <span style="margin-left:35px;">PPDB Online</span> </a>
+                <a class="navbar-brand" href="#page-top"><img src="img/unnamed.png" alt="Logo" width="35" style="position:absolute;margin-top:-10px;"> <span style="margin-left:40px;">PPDB Online</span> </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,13 +71,20 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio"><img src="img/unnamed.jpg" alt="Logo" width="15"> Tentang Sekolah</a>
+                        <a href="#portfolio"><i class="fa fa-info-circle"></i> Tentang Sekolah</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about"><i class="fa fa-info-circle"></i> Informasi</a>
+                        <a href="#about"><i class="fa fa-bullhorn"></i> Informasi</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#contact"><i class="fa fa-phone-square"></i> Kontak Kami</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="https://api.whatsapp.com/send/?phone=628988101080&text&type=phone_number&app_absent=0"><i class="fa fa-question-circle"></i> Bantuan</a>
+                    </li>
+                    <li ><a href="logcs">
+                     <i class="fa fa-sign-in"></i> <?php if($ceks==''){echo "Login";}else{echo "Login";} ?> Siswa
+                    </a>&nbsp;&nbsp;
                     </li>
                 </ul>
             </div>
@@ -66,28 +96,31 @@
     <!-- Header -->
     <header>
       <?php
-      if (strtolower($this->uri->segment(1)) == 'logcs') {
-        $this->load->view('web/login');
-      } ?>
+      $segment = $this->uri->segment(1);
+if ($segment !== null && strtolower($segment) == 'logcs') {
+    $this->load->view('web/login');
+}
+?>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12" >
-                    <img class="img-responsive" src="img/unnamed.jpg" style="margin-top:-15%;margin-bottom:-10px;" width="100">
+                    <img class="img-responsive" src="img/unnamed.png" style="margin-top:-15%;margin-bottom:-10px;" width="100">
                     <div class="intro-text"><br>
                         <span class="name shad" style="font-size:35px">PPDB ONLINE <br> SMK NURUL HAYYAH</span>
 
                         <br>
                       <?php if ($web_ppdb->status_ppdb == 'buka') {?>
+                        
                         <span class="skills">
-                        	<a href="files/Panduan_PPDB_Online_SMKNURULHAYYAH.pdf" class="btn btn-danger btn-lg"><i class="fa fa-file-pdf-o faa-pulse animated"></i> &nbsp;Download Panduan PPDB Online</a>
-                        </span>
+                        	
                         <br> <br>
                         <hr class="star-light">
 												<br>
-                        <!-- <h3>Login Calon Siswa Terdaftar di PPDB Online SMK Plus Al-Maftuh</h3> -->
+                        <!-- <h3>Login Calon Siswa Terdaftar di PPDB Online SMK Nurul Nuha</h3> -->
                         <span>
-                         <a href="pendaftaran" class="btn btn-success btn-lg" style="width:300px;margin:5px;"><i class="fa fa-file faa-pulse animated"></i> &nbsp;PPDB akun siswa</a>
-												 <a href="logcs" class="btn btn-success btn-lg" style="width:300px;margin:5px;"><i class="fa fa-users faa-pulse animated"></i> &nbsp;<?php if($ceks==''){echo "Login";}else{echo "Panel";} ?> Akun Siswa</a>
+                         
+                         
+												 
 												 <br>
 											  </span>
                       <?php }else{ ?>
@@ -109,6 +142,7 @@
     </header>
 
     <!-- Portfolio Grid Section -->
+    
     <section id="portfolio">
         <div class="container">
             <div class="row">
@@ -120,13 +154,15 @@
             </div>
             <div class="row">
                 <div class="col-sm-12 portfolio-item">
-                    <a href="https://nuha.smkbisa.id/" target="_blank" class="portfolio-link">
+                    <a href="https://nuha.smkbisa.id//" target="_blank" class="portfolio-link">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/unnamed.jpg" class="img-thumbnail" alt=""><br><br>
+                        <div style="text-align: center;">
+  <img src="img/unnamed.png" class="img-thumbnail" alt=""><br><br>
+</div>
                         <span class="btn btn-success btn-block">www.nuha.smkbisa.id</span>
                     </a>
                 </div>
@@ -153,14 +189,12 @@
                     <p>Pengisian form PPDB Online mohon diperhatikan data yang dibutuhkan yang nantinya akan dipakai dalam proses PPDB. Setelah proses pengisian form PPDB secara online berhasil dilakukan, calon siswa akan mendapat bukti daftar dengan nomor pendaftaran dan harus disimpan yang akan digunakan untuk proses selanjutnya.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center page-scroll">
-                    <a href="#page-top" class="btn btn-md btn-outline">
-                        <i class="fa fa-pencil-square-o "></i> PPDB Online
+                <a href="pendaftaran" class="btn btn-md btn-outline"><i class="fa fa-user-plus"></i> &nbsp;Daftar Sekarang</a>
                     </a> &nbsp;&nbsp;
-                    <a href="#prosedur" class="btn btn-md btn-outline">
-                        <i class="fa fa-tasks"></i> Prosedur PPDB Online
+                    <a href="files/Panduan_PPDB_Online_SMKNURULHAYYAH.pdf" class="btn btn-md btn-outline"><i class="fa fa-download"></i>&nbsp;Download Panduan PPDB</a>
                     </a>&nbsp;&nbsp;
-                    <a href="logcs" class="btn btn-md btn-outline">
-                        <i class="fa fa-sign-in"></i> <?php if($ceks==''){echo "Login";}else{echo "Panel";} ?> Calon Siswa
+                    <a href="https://nuha.smkbisa.id/" class="btn btn-md btn-outline">
+                        <i class="fa fa-arrow-left"></i>Kembali Ke Beranda
                     </a>&nbsp;&nbsp;
 
                 </div>
@@ -191,7 +225,7 @@
                                 <ol style="font-size:18px;text-align:justify">
                                 <li>Calon Siswa mendaftarkan diri atau melakukan <b><a href="pendaftaran">Pendaftaran PPDB <i>online</i></a></b> melalui website <b><a href="">PPDB SMK NURUL HAYYAH</a></b>.</li>
                                 <li>Setelah Calon Siswa berhasil melakukan pendaftaran, Calon siswa wajib melakukan <b>Print Out Pendaftaran & Mempersiapkan Kelengkapan Berkas PPDB SMK NURUL HAYYAH</b>.</li>
-                                <li>Calon siswa datang ke SMK NURUL HAYYAH untuk <b>VERIFIKASI</b>, membawa <b>Bukti pendaftaran & Kelengkapan Berkas PPDB SMK NURUL HAYYAH</b>. </li>
+                                <li>Calon siswa datang ke SMP NURUL HAYYAH untuk <b>VERIFIKASI</b>, membawa <b>Bukti pendaftaran & Kelengkapan Berkas PPDB SMK NURUL HAYYAH</b>. </li>
                                 <li>Panitia PPDB melakukan <b>Verifikasi dan Validasi Berkas Pendaftaran</b>.</li>
                                 <li>Setelah selesai Calon Siswa Menerima <b>TANDA BUKTI VERIFIKASI</b>.</li>
                                 <li>Calon Siswa wajib mengambil <b>NOMOR TEST & Pengecekan Ruang Ujian</b>.</li>
@@ -216,31 +250,28 @@
                     <h2>Kontak Kami</h2>
                     <hr class="star-light">
                     <h4>
-                    Jl. Lingkar Provinsi No.07 Bulakelor, Sawah, Ketanggungan, Brebes Regency, Central Java 52263, Indonesia <br><br>
+                    Jl. Lingkar Provinsi No.07 Bulakelor, Sawah, Ketanggungan, Brebes Regency, Central Java 52263 <br><br>
                     </h4>
-                    <span style="color:#222;"><b><i class="fa fa-phone-square"></i> 0856-2050-812</b> </span>
+                    <span style="color:#F0F8FF;"><b><i class="fa fa-phone-square"></i> 08988101080</b> </span>
 										&nbsp;
-                    <span class="eml" style="color:#222;"><i class="fa fa-envelope"></i> smkbisanuha@gmail.com</span>
+                    <span class="eml" style="color:#F0F8FF;"><i class="fa fa-envelope"></i> nuhasmkbisa@gmail.com</span>
                     <br>
-                    <a href="http://www.smkbisanuha.com/" target="_blank"><h4 class="btn btn-success">SMK NURUL HAYYAH </h4></a>
+                    
                 </div>
-                <div class="col-lg-8 text-center">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.623850776743!2d108.90708517371112!3d-6.9354802678875185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fa5e24ecff76d%3A0xf6f03263cdd8f4ad!2sPondok%20Pesantren%20Nurul%20Hayah%20Brebes!5e0!3m2!1sid!2sid!4v1705456112844!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              	</div>
+                <div class="embed-responsive embed-responsive-16by9"style="max-height: 300px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d506959.8144408578!2d108.909575!3d-6.935516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fa5e24ecff76d%3A0xf6f03263cdd8f4ad!2sPondok%20Pesantren%20Nurul%20Hayah%20Brebes!5e0!3m2!1sen!2sus!4v1713941108157!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
             </div>
         <!-- </div> -->
     </section>
-
-
-
     <!-- Footer -->
     <footer class="text-center">
-
         <div class="footer-below">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; <a href="http://www.smknuha.sch.id" target="_blank">SMK NURUL HAYYAH</a> <?php echo date('Y'); ?> | IT Development
+                        Copyright &copy; SMK NURUL HAYYAH</a> <?php echo date('Y'); ?> | IT Development
                     </div>
                 </div>
             </div>

@@ -16,7 +16,7 @@
 
 		<div class="navbar-collapse collapse" id="footer">
 			<div class="navbar-text">
-				&copy; 2018. <a href="#" class="navbar-link">Data Pengusahaan</a>
+				&copy; 2024. <a href="#" class="navbar-link">Data Pengusahaan</a>
 			</div>
 
 			<!-- <div class="navbar-right">

@@ -73,10 +73,11 @@ hr.star-primary:after {
 header {
   margin-top: 6%;
   text-align: center;
-  background-image: url("../../img/pengajar.jpeg");
+  background-image: url("../../img/admin-.png");
   background-color: #357bc2;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center; /* Menengahkan gambar latar belakang */
   color: white;
 }
 header .container {
@@ -110,14 +111,23 @@ header .intro-text .skills {
     font-size: 1.75em;
   }
 }
+/* Gaya asli untuk .navbar-custom */
 .navbar-custom {
-  /* opacity:0.9; */
   background: #f51d01;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  border: none;
+  border-color: #DFD263;
 }
+
+/* Gaya tambahan untuk .navbar-custom saat di-klik pada mode mobile */
+@media only screen and (max-width: 768px) {
+  .navbar-custom:active {
+      background: #DFD263;
+
+  }
+}
+
 .navbar-custom a:focus {
   outline: none;
 }
@@ -137,7 +147,7 @@ header .intro-text .skills {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #4dd124;
+  color: #0d0512;
   outline: none;
 }
 .navbar-custom .navbar-nav li a:focus,
@@ -145,14 +155,14 @@ header .intro-text .skills {
   color: white;
 }
 .navbar-custom .navbar-nav li.active a {
-  color: white;
-  background: #5e8b5a;
+  color: #0d0512;
+  background: white;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
-  color: white;
-  background: #2A95FF;
+  color: #0d0512;
+  background: white;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -162,9 +172,9 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #2A95FF;
-  color: white;
-  border-color: #2A95FF;
+  background-color: white;
+  color: #0d0512;
+  border-color: #0d0512;
 }
 @media (min-width: 768px) {
   .navbar-custom {
@@ -194,7 +204,7 @@ section h2 {
   font-size: 3em;
 }
 section.success {
-  background: #112512;
+  background: #239E65;
   color: white;
 }
 @media (max-width: 767px) {
@@ -209,6 +219,7 @@ section.success {
   margin: 0 0 15px;
   right: 0;
 }
+
 #portfolio .portfolio-item .portfolio-link {
   display: block;
   position: relative;
@@ -216,7 +227,7 @@ section.success {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
-  background: rgba(24, 188, 156, 0.9);
+  background: #E23338;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -317,7 +328,8 @@ footer .footer-col {
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #233140;
+  background-color: #E23338;
+  border-color: #DFD263;
 }
 .btn-outline {
   color: white;
@@ -331,7 +343,7 @@ footer .footer-below {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-  color: #90a5bb;
+  color: #0d0512;
   background: white;
   border: solid 2px white;
 }
@@ -379,9 +391,9 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: white;
-  background-color: #2B589C;
-  /*background-color: #2A95FF;*/
-  border-color: #2A95FF;
+  background-color: #E23338;
+  /*background-color: #E23338;*/
+  border-color: #E23338;
   font-weight: 700;
 }
 .btn-success:hover,
@@ -413,11 +425,11 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #2A95FF;
-  border-color: #2A95FF;
+  background-color: #0d0512;
+  border-color: #0d0512;
 }
 .btn-success .badge {
-  color: #2A95FF;
+  color: #0d0512;
   background-color: white;
 }
 .btn-social {
@@ -566,12 +578,12 @@ ol ol li:last-child {margin-bottom:0;}
 
 .layer
 {   overflow: hidden;
-    position: fixed;
-    width:100%;
-    height: 100%;
+    position: relative;
+    width:50%;
+    height: 50%;
     background-color: #fff;
-    z-index:99999;
-    opacity:0.6;
+    z-index:99;
+    opacity:0.4;
 }
 .obox{
     position:fixed;
@@ -580,7 +592,7 @@ ol ol li:last-child {margin-bottom:0;}
     margin-right: auto;
     margin-left: auto;
     margin-top:60px;
-    width: 500px;
+    width: 400px;
     height:auto;
     background-color: #fff;
     z-index:9999999;
@@ -592,7 +604,7 @@ ol ol li:last-child {margin-bottom:0;}
 
     margin-top:-10px;
     height: 40px;
-    background-color: #2B589C;
+    background-color: #E23338 ;
     text-align: left;
 }
 .boxtext{

@@ -6,10 +6,16 @@ $email  = '';
 
 $level  = 'Calon Siswa';
 
-$menu 		= strtolower($this->uri->segment(1));
-$sub_menu = strtolower($this->uri->segment(2));
-$sub_menu3 = strtolower($this->uri->segment(3));
+$menu = $this->uri->segment(1);
+$menu = $menu !== null ? strtolower($menu) : '';
+
+$sub_menu = $this->uri->segment(2);
+$sub_menu = $sub_menu !== null ? strtolower($sub_menu) : '';
+
+$sub_menu3 = $this->uri->segment(3);
+$sub_menu3 = $sub_menu3 !== null ? strtolower($sub_menu3) : '';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +27,7 @@ $sub_menu3 = strtolower($this->uri->segment(3));
 	<base href="<?php echo base_url();?>"/>
 
 	<title><?php echo $judul_web; ?></title>
-	<link rel="icon" type="image/png" href="assets/panel/images/unnamed.jpg">
+	<link rel="icon" type="image/png" href="assets/panel/images/unnamed.png">
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -82,7 +88,7 @@ $sub_menu3 = strtolower($this->uri->segment(3));
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown dropdown-user">
 					<a class="dropdown-toggle" data-toggle="dropdown">
-						<img src="assets/panel/images/unnamed.jpg" alt="foto">
+						<img src="assets/panel/images/unnamed.png" alt="foto">
 						<span><?php echo ucwords($nama); ?></span>
 						<i class="caret"></i>
 					</a>
@@ -119,7 +125,7 @@ $sub_menu3 = strtolower($this->uri->segment(3));
 
 						<div class="category-content sidebar-user">
 							<div class="media">
-								<a href="panel_siswa/biodata" class="media-left"><img src="assets/panel/images/unnamed.jpg" class="img-circle img-sm" alt="foto"></a>
+								<a href="panel_siswa/biodata" class="media-left"><img src="assets/panel/images/unnamed.png" class="img-circle img-sm" alt="foto"></a>
 								<div class="media-body">
 									<span class="media-heading text-semibold"><?php echo ucwords($nama); ?></span>
 									<div class="text-size-mini text-muted">
